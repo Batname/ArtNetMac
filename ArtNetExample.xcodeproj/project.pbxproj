@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4D39A65422E24AA2009AF358 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D39A65322E24AA2009AF358 /* main.cpp */; };
+		4D39A65B22E24AEA009AF358 /* libArtnet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39A65A22E24AEA009AF358 /* libArtnet.dylib */; };
+		4D39A65D22E24E92009AF358 /* libArtnet.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D39A65A22E24AEA009AF358 /* libArtnet.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4D39A64E22E24AA2009AF358 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
+				4D39A65D22E24E92009AF358 /* libArtnet.dylib in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D39A65022E24AA2009AF358 /* ArtNetExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ArtNetExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D39A65322E24AA2009AF358 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D39A65A22E24AEA009AF358 /* libArtnet.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libArtnet.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D39A65B22E24AEA009AF358 /* libArtnet.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,7 @@
 		4D39A64722E24AA2009AF358 = {
 			isa = PBXGroup;
 			children = (
+				4D39A65A22E24AEA009AF358 /* libArtnet.dylib */,
 				4D39A65222E24AA2009AF358 /* ArtNetExample */,
 				4D39A65122E24AA2009AF358 /* Products */,
 			);
@@ -233,6 +239,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/bat/Projects/DMX/ArtNet/ArtNetExample/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +252,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/bat/Projects/DMX/ArtNet/ArtNetExample/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
